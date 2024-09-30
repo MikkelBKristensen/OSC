@@ -25,6 +25,7 @@ int main()
         exit(1);
     }
     printf("\n I am thread (%u) ", tid);
+    // _sleep(1);
     printf("Created new thread (%u)... \n", thread_id);
 
 

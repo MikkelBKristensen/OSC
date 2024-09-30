@@ -7,7 +7,7 @@ void * PrintHello(void * data)
     int my_data = (int)data;
     pthread_t tid = pthread_self();
 
-    printf("\n Hello from new thread (%u) - got %d !\n", tid, my_data);
+    printf("\n Hello from new thread (%u) - got %u !\n", tid, my_data);
     pthread_exit(NULL);
 }
 
@@ -18,9 +18,7 @@ int main()
     pthread_t tid;
     tid = pthread_self();
 
-    int t = 11;
-
-    rc = pthread_create(&thread_id, NULL, PrintHello, (void*)t);
+    rc = pthread_create(&thread_id, NULL, PrintHello, (void *) tid);
     if(rc)
     {
         printf("\n ERROR: return code from pthread_create is %d \n", rc);

@@ -4,4 +4,4 @@ project(OSC C)
 set(CMAKE_C_STANDARD 11)
 
 add_executable(OSC
-    ThreadsExercises/Hello.c)
+        Exercises/pthreads/Hello.c)
